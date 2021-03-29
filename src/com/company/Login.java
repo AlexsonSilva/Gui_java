@@ -1,7 +1,6 @@
 package com.company;
 
 import javax.swing.*;
-import javax.swing.border.Border;
 import java.awt.*;
 
 public class Login extends JFrame {
@@ -15,85 +14,66 @@ public class Login extends JFrame {
     private final JButton submitButton;
 
 
-    private final String[] loginOption = {"Student",
-    "Lecturer"};
-
+    private final String[] loginOption = {"Adm", "Student",
+            "Lecturer"};
 
     public Login() {
-        super("Login");
 
-        JPanel panel = new JPanel();
-        add(panel);
+        JLabel background=new JLabel(new ImageIcon(getClass().getResource("login.jpg")));
 
-        ImageIcon image = new ImageIcon(getClass().getResource("login.jpg"));
-        JLabel l = new JLabel(image);
-        panel.setLayout(new BorderLayout());
-        add(l);
+        add(background);
 
-
-
-        add(panel);
+        SpringLayout layout = new SpringLayout();
+        background.setLayout(layout);
 
         usernameLabel = new JLabel("Username:");
-        setLayout(null);
-        Insets insets = usernameLabel.getInsets();
-        Dimension size = usernameLabel.getPreferredSize();
-        usernameLabel.setBounds(25 + insets.left, 700 + insets.top,
-                size.width, size.height);
-        add(usernameLabel);
-
-
+        layout.putConstraint(SpringLayout.WEST, usernameLabel, 5, SpringLayout.WEST, background);
+        SpringLayout.Constraints labelCons = layout.getConstraints(usernameLabel);
+        labelCons.setX(Spring.constant(15));
+        labelCons.setY(Spring.constant(300));
+        background.add(usernameLabel);
 
         passwordLabel = new JLabel("Password:");
-        setLayout(null);
-        insets = passwordLabel.getInsets();
-        size = passwordLabel.getPreferredSize();
-        passwordLabel.setBounds(25 + insets.left, 730 + insets.top,
-                size.width, size.height);
-        add(passwordLabel);
+        layout.putConstraint(SpringLayout.WEST, passwordLabel, 25, SpringLayout.WEST, background);
+        labelCons = layout.getConstraints(passwordLabel);
+        labelCons.setX(Spring.constant(15));
+        labelCons.setY(Spring.constant(325));
+        background.add(passwordLabel);
 
         optionLabel = new JLabel("Login as:");
-        setLayout(null);
-        insets = optionLabel.getInsets();
-        size = optionLabel.getPreferredSize();
-        optionLabel.setBounds(25 + insets.left, 760 + insets.top,
-                size.width, size.height);
-        add(optionLabel);
+       layout.putConstraint(SpringLayout.WEST, optionLabel, 25, SpringLayout.WEST, background);
+        labelCons = layout.getConstraints(optionLabel);
+        labelCons.setX(Spring.constant(15));
+        labelCons.setY(Spring.constant(350));
+        background.add(optionLabel);
 
-        usernameField = new JTextField();
-        setLayout(null);
-        insets = usernameField.getInsets();
-        size = usernameField.getPreferredSize();
-        usernameField.setBounds(105 + insets.left, 690 + insets.top,
-                125, size.height);
-        add(usernameField);
+        usernameField = new JTextField("", 10);
+        layout.putConstraint(SpringLayout.WEST, usernameField, 5, SpringLayout.WEST, background);
+        labelCons = layout.getConstraints(usernameField);
+        labelCons.setX(Spring.constant(105));
+        labelCons.setY(Spring.constant(300));
+        background.add(usernameField);
 
-        passwordField= new JTextField();
-        setLayout(null);
-        insets = passwordField.getInsets();
-        size = passwordField.getPreferredSize();
-        passwordField.setBounds(105 + insets.left, 720 + insets.top,
-                125, size.height);
-        add(passwordField);
+        passwordField= new JTextField("", 10);
+        layout.putConstraint(SpringLayout.WEST, passwordField, 25, SpringLayout.WEST, background);
+        labelCons = layout.getConstraints(passwordField);
+        labelCons.setX(Spring.constant(105));
+        labelCons.setY(Spring.constant(325));
+        background.add(passwordField);
 
         optionComboBox = new JComboBox<String>(loginOption);
-        setLayout(null);
-        insets = optionComboBox.getInsets();
-        size = optionComboBox.getPreferredSize();
-        optionComboBox.setBounds(110 + insets.left, 750 + insets.top,
-                130, size.height);
-        add(optionComboBox);
+        layout.putConstraint(SpringLayout.WEST, optionComboBox, 25, SpringLayout.WEST, background);
+        labelCons = layout.getConstraints(optionComboBox);
+        labelCons.setX(Spring.constant(105));
+        labelCons.setY(Spring.constant(350));
+        background.add(optionComboBox);
 
         submitButton = new JButton("Submit");
-        setLayout(null);
-        insets = submitButton.getInsets();
-        size = submitButton.getPreferredSize();
-        submitButton.setBounds(90 + insets.left,780 + insets.top,
-                size.width, size.height);
-        add(submitButton);
-
-
-
+        layout.putConstraint(SpringLayout.WEST, submitButton, 25, SpringLayout.WEST, background);
+        labelCons = layout.getConstraints(submitButton);
+        labelCons.setX(Spring.constant(105));
+        labelCons.setY(Spring.constant(375));
+        background.add(submitButton);
 
     }
 
