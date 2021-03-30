@@ -4,12 +4,12 @@ import javax.swing.*;
 
 public class StudentPage extends JFrame {
 
-    private final JButton assignmentsButton;
-    private final JButton gradesButton;
-    private final JButton timetableButton;
-    private final JButton attendanceButton;
-    private final JButton examDateButton;
-    private final JButton coursesButton;
+    private final JButton ASSIGNMENTS_BUTTON;
+    private final JButton GRADES_BUTTON;
+    private final JButton TIMETABLE_BUTTON;
+    private final JButton ATTENDANCE_BUTTON;
+    private final JButton EXAM_DATE_BUTTON;
+    private final JButton COURSES_BUTTON;
 
 
     public StudentPage(){
@@ -20,46 +20,46 @@ public class StudentPage extends JFrame {
         SpringLayout layout = new SpringLayout();
         background.setLayout(layout);
 
-        assignmentsButton = new JButton(new ImageIcon(getClass().getResource("assignment_bk.png")));
-        layout.putConstraint(SpringLayout.WEST, assignmentsButton, 5, SpringLayout.WEST, background);
-        SpringLayout.Constraints labelCons = layout.getConstraints(assignmentsButton);
+        ASSIGNMENTS_BUTTON = new JButton(new ImageIcon(getClass().getResource("assignment_bk.png")));
+        layout.putConstraint(SpringLayout.WEST, ASSIGNMENTS_BUTTON, 5, SpringLayout.WEST, background);
+        SpringLayout.Constraints labelCons = layout.getConstraints(ASSIGNMENTS_BUTTON);
         labelCons.setX(Spring.constant(150));
         labelCons.setY(Spring.constant(75));
-        background.add(assignmentsButton);
+        background.add(ASSIGNMENTS_BUTTON);
 
-        gradesButton = new JButton(new ImageIcon(getClass().getResource("grades_bk.jpg")));
-        layout.putConstraint(SpringLayout.WEST, gradesButton, 5, SpringLayout.WEST, background);
-        labelCons = layout.getConstraints(gradesButton);
+        GRADES_BUTTON = new JButton(new ImageIcon(getClass().getResource("grades_bk.jpg")));
+        layout.putConstraint(SpringLayout.WEST, GRADES_BUTTON, 5, SpringLayout.WEST, background);
+        labelCons = layout.getConstraints(GRADES_BUTTON);
         labelCons.setX(Spring.constant(300));
         labelCons.setY(Spring.constant(75));
-        background.add(gradesButton);
+        background.add(GRADES_BUTTON);
 
-        timetableButton = new JButton(new ImageIcon(getClass().getResource("timetable_bk.jpg")));
-        layout.putConstraint(SpringLayout.WEST, timetableButton, 5, SpringLayout.WEST, background);
-        labelCons = layout.getConstraints(timetableButton);
+        TIMETABLE_BUTTON = new JButton(new ImageIcon(getClass().getResource("timetable_bk.jpg")));
+        layout.putConstraint(SpringLayout.WEST, TIMETABLE_BUTTON, 5, SpringLayout.WEST, background);
+        labelCons = layout.getConstraints(TIMETABLE_BUTTON);
         labelCons.setX(Spring.constant(480));
         labelCons.setY(Spring.constant(75));
-        background.add(timetableButton);
+        background.add(TIMETABLE_BUTTON);
 
-        attendanceButton = new JButton(new ImageIcon(getClass().getResource("attendance_bk.jpg")));
-        layout.putConstraint(SpringLayout.WEST, attendanceButton, 5, SpringLayout.WEST, background);
-        labelCons = layout.getConstraints(attendanceButton);
+        ATTENDANCE_BUTTON = new JButton(new ImageIcon(getClass().getResource("attendance_bk.jpg")));
+        layout.putConstraint(SpringLayout.WEST, ATTENDANCE_BUTTON, 5, SpringLayout.WEST, background);
+        labelCons = layout.getConstraints(ATTENDANCE_BUTTON);
         labelCons.setX(Spring.constant(150));
         labelCons.setY(Spring.constant(200));
-        background.add(attendanceButton);
+        background.add(ATTENDANCE_BUTTON);
 
-        examDateButton = new JButton(new ImageIcon(getClass().getResource("examdates_bk.jpg")));
-        layout.putConstraint(SpringLayout.WEST, examDateButton, 5, SpringLayout.WEST, background);
-        labelCons = layout.getConstraints(examDateButton);
+        EXAM_DATE_BUTTON = new JButton(new ImageIcon(getClass().getResource("examdates_bk.jpg")));
+        layout.putConstraint(SpringLayout.WEST, EXAM_DATE_BUTTON, 5, SpringLayout.WEST, background);
+        labelCons = layout.getConstraints(EXAM_DATE_BUTTON);
         labelCons.setX(Spring.constant(300));
         labelCons.setY(Spring.constant(200));
-        background.add(examDateButton);
+        background.add(EXAM_DATE_BUTTON);
 
-        coursesButton = new JButton(new ImageIcon(getClass().getResource("courses_bk.png")));
-        layout.putConstraint(SpringLayout.WEST, coursesButton, 5, SpringLayout.WEST, background);
-        labelCons = layout.getConstraints(coursesButton);
+        COURSES_BUTTON = new JButton(new ImageIcon(getClass().getResource("courses_bk.png")));
+        layout.putConstraint(SpringLayout.WEST, COURSES_BUTTON, 5, SpringLayout.WEST, background);
+        labelCons = layout.getConstraints(COURSES_BUTTON);
         labelCons.setX(Spring.constant(480));
         labelCons.setY(Spring.constant(200));
-        background.add(coursesButton);
+        background.add(COURSES_BUTTON);
     }
 }

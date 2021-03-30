@@ -4,33 +4,33 @@ import javax.swing.*;
 import java.awt.*;
 
 public class StudentRegistration extends JFrame{
-    private final JLabel formLabel;
-    private final JLabel idLabel;
-    private final JLabel fNLabel;
-    private final JLabel lNLabel;
-    private final JLabel genderLabel;
-    private final JLabel birthDateLabel;
-    private final JLabel phoneLabel;
-    private final JLabel addressLabel;
-    private final JLabel cityLabel;
-    private final JLabel emailLabel;
-    private final JLabel passwordLabel;
+    private final JLabel FORM_LABEL;
+    private final JLabel ID_LABEL;
+    private final JLabel FN_LABEL;
+    private final JLabel LN_LABEL;
+    private final JLabel GENDER_LABEL;
+    private final JLabel BIRTH_DATE_LABEL;
+    private final JLabel PHONE_LABEL;
+    private final JLabel ADDRESS_LABEL;
+    private final JLabel CITY_LABEL;
+    private final JLabel EMAIL_LABEL;
+    private final JLabel PASSWORD_LABEL;
 
-    private final JTextField idTextField;
-    private final JTextField fNTextField;
-    private final JTextField lNTextField;
-    private final JCheckBox maleCheckBox;
-    private final JCheckBox femaleCheckBox;
-    private final ButtonGroup checkBoxGroup;
-    private final JTextField birthDateTextField;
-    private final JTextField phoneTextField;
-    private final JTextField addressTextField;
-    private final JTextField cityTextField;
-    private final JTextField emailTextField;
-    private final JTextField passwordTextField;
+    private final JTextField ID_TEXTFIELD;
+    private final JTextField FN_TEXTFIELD;
+    private final JTextField LN_TEXTFIELD;
+    private final JCheckBox MALE_CHECKBOX;
+    private final JCheckBox FEMALE_CHECKBOX;
+    private final ButtonGroup CHECKBOX_GROUP;
+    private final JTextField BIRTH_DATE_TEXTFIELD;
+    private final JTextField PHONE_TEXTFIELD;
+    private final JTextField ADDRESS_TEXTFIELD;
+    private final JTextField CITY_TEXTFIELD;
+    private final JTextField EMAIL_TEXTFIELD;
+    private final JTextField PASSWORD_TEXTFIELD;
 
-    private final JButton submitButton;
-    private final JButton clearButton;
+    private final JButton SUBMIT_BUTTON;
+    private final JButton CLEAR_BUTTON;
 
     public StudentRegistration(){
         super("Student Registration");
@@ -44,207 +44,207 @@ public class StudentRegistration extends JFrame{
                 450, 30);
 
 
-        formLabel = new JLabel("Registration Form");
-        formLabel.setFont(new Font("Tahoma", Font.PLAIN, 18));
-        formLabel.setForeground(Color.white);
+        FORM_LABEL = new JLabel("Registration Form");
+        FORM_LABEL.setFont(new Font("Tahoma", Font.PLAIN, 18));
+        FORM_LABEL.setForeground(Color.white);
         setLayout(null);
-        insets = formLabel.getInsets();
-        size = formLabel.getPreferredSize();
-        formLabel.setBounds(150 + insets.left, 5 + insets.top,
+        insets = FORM_LABEL.getInsets();
+        size = FORM_LABEL.getPreferredSize();
+        FORM_LABEL.setBounds(150 + insets.left, 5 + insets.top,
                 size.width, size.height);
-        add(formLabel);
+        add(FORM_LABEL);
         add(panel);
 
-        idLabel = new JLabel("Student ID:");
+        ID_LABEL = new JLabel("Student ID:");
         setLayout(null);
-        insets = idLabel.getInsets();
-        size = idLabel.getPreferredSize();
-        idLabel.setBounds(25 + insets.left, 55 + insets.top,
+        insets = ID_LABEL.getInsets();
+        size = ID_LABEL.getPreferredSize();
+        ID_LABEL.setBounds(25 + insets.left, 55 + insets.top,
                 size.width, size.height);
-        add(idLabel);
+        add(ID_LABEL);
 
-        fNLabel = new JLabel("First Name:");
+        FN_LABEL = new JLabel("First Name:");
         setLayout(null);
-        insets = fNLabel.getInsets();
-        size = fNLabel.getPreferredSize();
-        fNLabel.setBounds(25 + insets.left, 85 + insets.top,
+        insets = FN_LABEL.getInsets();
+        size = FN_LABEL.getPreferredSize();
+        FN_LABEL.setBounds(25 + insets.left, 85 + insets.top,
                 size.width, size.height);
-        add(fNLabel);
+        add(FN_LABEL);
 
-        lNLabel = new JLabel("Last Name:");
+        LN_LABEL = new JLabel("Last Name:");
         setLayout(null);
-        insets = lNLabel.getInsets();
-        size = lNLabel.getPreferredSize();
-        lNLabel.setBounds(25 + insets.left, 115 + insets.top,
+        insets = LN_LABEL.getInsets();
+        size = LN_LABEL.getPreferredSize();
+        LN_LABEL.setBounds(25 + insets.left, 115 + insets.top,
                 size.width, size.height);
-        add(lNLabel);
+        add(LN_LABEL);
 
-        genderLabel = new JLabel("Gender:");
+        GENDER_LABEL = new JLabel("Gender:");
         setLayout(null);
-        insets = genderLabel.getInsets();
-        size = genderLabel.getPreferredSize();
-        genderLabel.setBounds(25 + insets.left, 145 + insets.top,
+        insets = GENDER_LABEL.getInsets();
+        size = GENDER_LABEL.getPreferredSize();
+        GENDER_LABEL.setBounds(25 + insets.left, 145 + insets.top,
                 size.width, size.height);
-        add(genderLabel);
+        add(GENDER_LABEL);
 
-        birthDateLabel = new JLabel("Birth Date:");
+        BIRTH_DATE_LABEL = new JLabel("Birth Date:");
         setLayout(null);
-        insets = birthDateLabel.getInsets();
-        size = birthDateLabel.getPreferredSize();
-        birthDateLabel.setBounds(25 + insets.left, 175 + insets.top,
+        insets = BIRTH_DATE_LABEL.getInsets();
+        size = BIRTH_DATE_LABEL.getPreferredSize();
+        BIRTH_DATE_LABEL.setBounds(25 + insets.left, 175 + insets.top,
                 size.width, size.height);
-        add(birthDateLabel);
+        add(BIRTH_DATE_LABEL);
 
-        phoneLabel = new JLabel("Phone Number:");
+        PHONE_LABEL = new JLabel("Phone Number:");
         setLayout(null);
-        insets = phoneLabel.getInsets();
-        size = phoneLabel.getPreferredSize();
-        phoneLabel.setBounds(25 + insets.left, 205 + insets.top,
+        insets = PHONE_LABEL.getInsets();
+        size = PHONE_LABEL.getPreferredSize();
+        PHONE_LABEL.setBounds(25 + insets.left, 205 + insets.top,
                 size.width, size.height);
-        add(phoneLabel);
+        add(PHONE_LABEL);
 
-        addressLabel = new JLabel("Address:");
+        ADDRESS_LABEL = new JLabel("Address:");
         setLayout(null);
-        insets = addressLabel.getInsets();
-        size = addressLabel.getPreferredSize();
-        addressLabel.setBounds(25 + insets.left, 235 + insets.top,
+        insets = ADDRESS_LABEL.getInsets();
+        size = ADDRESS_LABEL.getPreferredSize();
+        ADDRESS_LABEL.setBounds(25 + insets.left, 235 + insets.top,
                 size.width, size.height);
-        add(addressLabel);
+        add(ADDRESS_LABEL);
 
-        cityLabel = new JLabel("City:");
+        CITY_LABEL = new JLabel("City:");
         setLayout(null);
-        insets = cityLabel.getInsets();
-        size = cityLabel.getPreferredSize();
-        cityLabel.setBounds(25 + insets.left, 265 + insets.top,
+        insets = CITY_LABEL.getInsets();
+        size = CITY_LABEL.getPreferredSize();
+        CITY_LABEL.setBounds(25 + insets.left, 265 + insets.top,
                 size.width, size.height);
-        add(cityLabel);
+        add(CITY_LABEL);
 
-        emailLabel = new JLabel("Email Address:");
+        EMAIL_LABEL = new JLabel("Email Address:");
         setLayout(null);
-        insets = emailLabel.getInsets();
-        size = emailLabel.getPreferredSize();
-        emailLabel.setBounds(25 + insets.left, 295 + insets.top,
+        insets = EMAIL_LABEL.getInsets();
+        size = EMAIL_LABEL.getPreferredSize();
+        EMAIL_LABEL.setBounds(25 + insets.left, 295 + insets.top,
                 size.width, size.height);
-        add(emailLabel);
+        add(EMAIL_LABEL);
 
-        passwordLabel = new JLabel("Password:");
+        PASSWORD_LABEL = new JLabel("Password:");
         setLayout(null);
-        insets = passwordLabel.getInsets();
-        size = passwordLabel.getPreferredSize();
-        passwordLabel.setBounds(25 + insets.left, 325 + insets.top,
+        insets = PASSWORD_LABEL.getInsets();
+        size = PASSWORD_LABEL.getPreferredSize();
+        PASSWORD_LABEL.setBounds(25 + insets.left, 325 + insets.top,
                 size.width, size.height);
-        add(passwordLabel);
+        add(PASSWORD_LABEL);
 
         //Add TextField
-        idTextField = new JTextField();
+        ID_TEXTFIELD = new JTextField();
         setLayout(null);
-        insets = idTextField.getInsets();
-        size = idTextField.getPreferredSize();
-        idTextField.setBounds(150 + insets.left, 45 + insets.top,
+        insets = ID_TEXTFIELD.getInsets();
+        size = ID_TEXTFIELD.getPreferredSize();
+        ID_TEXTFIELD.setBounds(150 + insets.left, 45 + insets.top,
                 80, size.height);
-        add(idTextField);
+        add(ID_TEXTFIELD);
 
-        fNTextField = new JTextField();
+        FN_TEXTFIELD = new JTextField();
         setLayout(null);
-        insets = fNTextField.getInsets();
-        size = fNTextField.getPreferredSize();
-        fNTextField.setBounds(150 + insets.left, 75 + insets.top,
+        insets = FN_TEXTFIELD.getInsets();
+        size = FN_TEXTFIELD.getPreferredSize();
+        FN_TEXTFIELD.setBounds(150 + insets.left, 75 + insets.top,
                 200, size.height);
-        add(fNTextField);
+        add(FN_TEXTFIELD);
 
-        lNTextField = new JTextField();
+        LN_TEXTFIELD = new JTextField();
         setLayout(null);
-        insets = lNTextField.getInsets();
-        size = lNTextField.getPreferredSize();
-        lNTextField.setBounds(150 + insets.left, 105 + insets.top,
+        insets = LN_TEXTFIELD.getInsets();
+        size = LN_TEXTFIELD.getPreferredSize();
+        LN_TEXTFIELD.setBounds(150 + insets.left, 105 + insets.top,
                 200, size.height);
-        add(lNTextField);
+        add(LN_TEXTFIELD);
 
-        birthDateTextField = new JTextField();
+        BIRTH_DATE_TEXTFIELD = new JTextField();
         setLayout(null);
-        insets = birthDateTextField.getInsets();
-        size = birthDateTextField.getPreferredSize();
-        birthDateTextField.setBounds(150 + insets.left, 165 + insets.top,
+        insets = BIRTH_DATE_TEXTFIELD.getInsets();
+        size = BIRTH_DATE_TEXTFIELD.getPreferredSize();
+        BIRTH_DATE_TEXTFIELD.setBounds(150 + insets.left, 165 + insets.top,
                 105, size.height);
-        add(birthDateTextField);
+        add(BIRTH_DATE_TEXTFIELD);
 
-        phoneTextField = new JTextField();
+        PHONE_TEXTFIELD = new JTextField();
         setLayout(null);
-        insets = phoneTextField.getInsets();
-        size = phoneTextField.getPreferredSize();
-        phoneTextField.setBounds(150 + insets.left, 195 + insets.top,
+        insets = PHONE_TEXTFIELD.getInsets();
+        size = PHONE_TEXTFIELD.getPreferredSize();
+        PHONE_TEXTFIELD.setBounds(150 + insets.left, 195 + insets.top,
                 105, size.height);
-        add(phoneTextField);
+        add(PHONE_TEXTFIELD);
 
-        addressTextField = new JTextField();
+        ADDRESS_TEXTFIELD = new JTextField();
         setLayout(null);
-        insets = addressTextField.getInsets();
-        size = addressTextField.getPreferredSize();
-        addressTextField.setBounds(150 + insets.left, 225 + insets.top,
+        insets = ADDRESS_TEXTFIELD.getInsets();
+        size = ADDRESS_TEXTFIELD.getPreferredSize();
+        ADDRESS_TEXTFIELD.setBounds(150 + insets.left, 225 + insets.top,
                 250, size.height);
-        add(addressTextField);
+        add(ADDRESS_TEXTFIELD);
 
-        cityTextField = new JTextField();
+        CITY_TEXTFIELD = new JTextField();
         setLayout(null);
-        insets = cityTextField.getInsets();
-        size = cityTextField.getPreferredSize();
-        cityTextField.setBounds(150 + insets.left, 255 + insets.top,
+        insets = CITY_TEXTFIELD.getInsets();
+        size = CITY_TEXTFIELD.getPreferredSize();
+        CITY_TEXTFIELD.setBounds(150 + insets.left, 255 + insets.top,
                 105, size.height);
-        add(cityTextField);
+        add(CITY_TEXTFIELD);
 
-        emailTextField = new JTextField();
+        EMAIL_TEXTFIELD = new JTextField();
         setLayout(null);
-        insets = emailTextField.getInsets();
-        size = emailTextField.getPreferredSize();
-        emailTextField.setBounds(150 + insets.left, 285 + insets.top,
+        insets = EMAIL_TEXTFIELD.getInsets();
+        size = EMAIL_TEXTFIELD.getPreferredSize();
+        EMAIL_TEXTFIELD.setBounds(150 + insets.left, 285 + insets.top,
                 250, size.height);
-        add(emailTextField);
+        add(EMAIL_TEXTFIELD);
 
-        passwordTextField = new JTextField();
+        PASSWORD_TEXTFIELD = new JTextField();
         setLayout(null);
-        insets = passwordTextField.getInsets();
-        size = passwordTextField.getPreferredSize();
-        passwordTextField.setBounds(150 + insets.left, 315 + insets.top,
+        insets = PASSWORD_TEXTFIELD.getInsets();
+        size = PASSWORD_TEXTFIELD.getPreferredSize();
+        PASSWORD_TEXTFIELD.setBounds(150 + insets.left, 315 + insets.top,
                 105, size.height);
-        add(passwordTextField);
+        add(PASSWORD_TEXTFIELD);
 
         //Add Button
-        submitButton = new JButton("Submit");
+        SUBMIT_BUTTON = new JButton("Submit");
         setLayout(null);
-        insets = submitButton.getInsets();
-        size = submitButton.getPreferredSize();
-        submitButton.setBounds(130 + insets.left,370 + insets.top,
+        insets = SUBMIT_BUTTON.getInsets();
+        size = SUBMIT_BUTTON.getPreferredSize();
+        SUBMIT_BUTTON.setBounds(130 + insets.left,370 + insets.top,
                 size.width, size.height);
-        add(submitButton);
+        add(SUBMIT_BUTTON);
 
-        clearButton = new JButton("Clear");
+        CLEAR_BUTTON = new JButton("Clear");
         setLayout(null);
-        insets = clearButton.getInsets();
-        size = clearButton.getPreferredSize();
-        clearButton.setBounds(230 + insets.left,370 + insets.top,
+        insets = CLEAR_BUTTON.getInsets();
+        size = CLEAR_BUTTON.getPreferredSize();
+        CLEAR_BUTTON.setBounds(230 + insets.left,370 + insets.top,
                 size.width, size.height);
-        add(clearButton);
+        add(CLEAR_BUTTON);
 
         //Add CheckBox
-        maleCheckBox = new JCheckBox("Male");
+        MALE_CHECKBOX = new JCheckBox("Male");
         setLayout(null);
-        insets = maleCheckBox.getInsets();
-        size = maleCheckBox.getPreferredSize();
-        maleCheckBox.setBounds(150 + insets.left, 135 + insets.top,
+        insets = MALE_CHECKBOX.getInsets();
+        size = MALE_CHECKBOX.getPreferredSize();
+        MALE_CHECKBOX.setBounds(150 + insets.left, 135 + insets.top,
                 105, size.height);
-        add(maleCheckBox);
+        add(MALE_CHECKBOX);
 
-        femaleCheckBox = new JCheckBox("Female");
+        FEMALE_CHECKBOX = new JCheckBox("Female");
         setLayout(null);
-        insets = femaleCheckBox.getInsets();
-        size = femaleCheckBox.getPreferredSize();
-        femaleCheckBox.setBounds(230 + insets.left, 135 + insets.top,
+        insets = FEMALE_CHECKBOX.getInsets();
+        size = FEMALE_CHECKBOX.getPreferredSize();
+        FEMALE_CHECKBOX.setBounds(230 + insets.left, 135 + insets.top,
                 105, size.height);
-        add(femaleCheckBox);
+        add(FEMALE_CHECKBOX);
 
-        checkBoxGroup = new ButtonGroup();
-        checkBoxGroup.add(maleCheckBox);
-        checkBoxGroup.add(femaleCheckBox);
+        CHECKBOX_GROUP = new ButtonGroup();
+        CHECKBOX_GROUP.add(MALE_CHECKBOX);
+        CHECKBOX_GROUP.add(FEMALE_CHECKBOX);
 
     }
 

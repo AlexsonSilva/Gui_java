@@ -1,17 +1,16 @@
 package com.company;
 
 import javax.swing.*;
-import java.awt.*;
 
 public class Login extends JFrame {
 
-    private final JLabel usernameLabel;
-    private final JLabel passwordLabel;
-    private final JLabel optionLabel;
-    private final JTextField usernameField;
-    private final JTextField passwordField;
-    private final JComboBox<String> optionComboBox;
-    private final JButton submitButton;
+    private final JLabel USERNAME_LABEL;
+    private final JLabel PASSWORD_LABEL;
+    private final JLabel OPTION_LABEL;
+    private final JTextField USERNAME_FIELD;
+    private final JTextField PASSWORD_FIELD;
+    private final JComboBox<String> OPTION_COMBOBOX;
+    private final JButton SUBMIT_BUTTON;
 
 
     private final String[] loginOption = {"Adm", "Student",
@@ -26,54 +25,54 @@ public class Login extends JFrame {
         SpringLayout layout = new SpringLayout();
         background.setLayout(layout);
 
-        usernameLabel = new JLabel("Username:");
-        layout.putConstraint(SpringLayout.WEST, usernameLabel, 5, SpringLayout.WEST, background);
-        SpringLayout.Constraints labelCons = layout.getConstraints(usernameLabel);
+        USERNAME_LABEL = new JLabel("Username:");
+        layout.putConstraint(SpringLayout.WEST, USERNAME_LABEL, 5, SpringLayout.WEST, background);
+        SpringLayout.Constraints labelCons = layout.getConstraints(USERNAME_LABEL);
         labelCons.setX(Spring.constant(15));
         labelCons.setY(Spring.constant(300));
-        background.add(usernameLabel);
+        background.add(USERNAME_LABEL);
 
-        passwordLabel = new JLabel("Password:");
-        layout.putConstraint(SpringLayout.WEST, passwordLabel, 25, SpringLayout.WEST, background);
-        labelCons = layout.getConstraints(passwordLabel);
+        PASSWORD_LABEL = new JLabel("Password:");
+        layout.putConstraint(SpringLayout.WEST, PASSWORD_LABEL, 25, SpringLayout.WEST, background);
+        labelCons = layout.getConstraints(PASSWORD_LABEL);
         labelCons.setX(Spring.constant(15));
         labelCons.setY(Spring.constant(325));
-        background.add(passwordLabel);
+        background.add(PASSWORD_LABEL);
 
-        optionLabel = new JLabel("Login as:");
-       layout.putConstraint(SpringLayout.WEST, optionLabel, 25, SpringLayout.WEST, background);
-        labelCons = layout.getConstraints(optionLabel);
+        OPTION_LABEL = new JLabel("Login as:");
+       layout.putConstraint(SpringLayout.WEST, OPTION_LABEL, 25, SpringLayout.WEST, background);
+        labelCons = layout.getConstraints(OPTION_LABEL);
         labelCons.setX(Spring.constant(15));
         labelCons.setY(Spring.constant(350));
-        background.add(optionLabel);
+        background.add(OPTION_LABEL);
 
-        usernameField = new JTextField("", 10);
-        layout.putConstraint(SpringLayout.WEST, usernameField, 5, SpringLayout.WEST, background);
-        labelCons = layout.getConstraints(usernameField);
+        USERNAME_FIELD = new JTextField("", 10);
+        layout.putConstraint(SpringLayout.WEST, USERNAME_FIELD, 5, SpringLayout.WEST, background);
+        labelCons = layout.getConstraints(USERNAME_FIELD);
         labelCons.setX(Spring.constant(105));
         labelCons.setY(Spring.constant(300));
-        background.add(usernameField);
+        background.add(USERNAME_FIELD);
 
-        passwordField= new JTextField("", 10);
-        layout.putConstraint(SpringLayout.WEST, passwordField, 25, SpringLayout.WEST, background);
-        labelCons = layout.getConstraints(passwordField);
+        PASSWORD_FIELD = new JTextField("", 10);
+        layout.putConstraint(SpringLayout.WEST, PASSWORD_FIELD, 25, SpringLayout.WEST, background);
+        labelCons = layout.getConstraints(PASSWORD_FIELD);
         labelCons.setX(Spring.constant(105));
         labelCons.setY(Spring.constant(325));
-        background.add(passwordField);
+        background.add(PASSWORD_FIELD);
 
-        optionComboBox = new JComboBox<String>(loginOption);
-        layout.putConstraint(SpringLayout.WEST, optionComboBox, 25, SpringLayout.WEST, background);
-        labelCons = layout.getConstraints(optionComboBox);
+        OPTION_COMBOBOX = new JComboBox<String>(loginOption);
+        layout.putConstraint(SpringLayout.WEST, OPTION_COMBOBOX, 25, SpringLayout.WEST, background);
+        labelCons = layout.getConstraints(OPTION_COMBOBOX);
         labelCons.setX(Spring.constant(105));
         labelCons.setY(Spring.constant(350));
-        background.add(optionComboBox);
+        background.add(OPTION_COMBOBOX);
 
-        submitButton = new JButton("Submit");
-        layout.putConstraint(SpringLayout.WEST, submitButton, 25, SpringLayout.WEST, background);
-        labelCons = layout.getConstraints(submitButton);
+        SUBMIT_BUTTON = new JButton("Submit");
+        layout.putConstraint(SpringLayout.WEST, SUBMIT_BUTTON, 25, SpringLayout.WEST, background);
+        labelCons = layout.getConstraints(SUBMIT_BUTTON);
         labelCons.setX(Spring.constant(105));
         labelCons.setY(Spring.constant(375));
-        background.add(submitButton);
+        background.add(SUBMIT_BUTTON);
 
     }
 
