@@ -21,7 +21,7 @@ public class Login extends JFrame {
 
     public Login() {
 
-        JLabel background=new JLabel(new ImageIcon(getClass().getResource("images/login.jpg")));
+        JLabel background=new JLabel(new ImageIcon(getClass().getResource("images/login_bk.jpeg")));
 
         add(background);
 

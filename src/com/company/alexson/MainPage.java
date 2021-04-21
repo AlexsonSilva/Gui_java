@@ -27,7 +27,7 @@ public class MainPage extends JFrame {
     public MainPage(){
         super("Main Page");
 
-        JLabel background=new JLabel(new ImageIcon(getClass().getResource("images/main_bk.jpg")));
+        JLabel background=new JLabel(new ImageIcon(getClass().getResource("images/main_bk.jpeg")));
         add(background);
 
         SpringLayout layout = new SpringLayout();
@@ -44,7 +44,7 @@ public class MainPage extends JFrame {
 
         ASSIGNMENTS_LABEL = new JLabel("Assignments");
         ASSIGNMENTS_LABEL.setFont(ASSIGNMENTS_LABEL.getFont().deriveFont(18f));
-        ASSIGNMENTS_LABEL.setForeground(Color.white);
+        ASSIGNMENTS_LABEL.setForeground(Color.decode("#22469b"));
         layout.putConstraint(SpringLayout.WEST, ASSIGNMENTS_LABEL, 5, SpringLayout.WEST, background);
         labelCons = layout.getConstraints(ASSIGNMENTS_LABEL);
         labelCons.setX(Spring.constant(170));
@@ -62,7 +62,7 @@ public class MainPage extends JFrame {
 
         GRADES_LABEL = new JLabel("Grades");
         GRADES_LABEL.setFont(GRADES_LABEL.getFont().deriveFont(18f));
-        GRADES_LABEL.setForeground(Color.white);
+        GRADES_LABEL.setForeground(Color.decode("#22469b"));
         layout.putConstraint(SpringLayout.WEST, GRADES_LABEL, 5, SpringLayout.WEST, background);
         labelCons = layout.getConstraints(GRADES_LABEL);
         labelCons.setX(Spring.constant(370));
@@ -80,7 +80,7 @@ public class MainPage extends JFrame {
 
         TIMETABLE_LABEL = new JLabel("Timetable");
         TIMETABLE_LABEL.setFont(TIMETABLE_LABEL.getFont().deriveFont(18f));
-        TIMETABLE_LABEL.setForeground(Color.white);
+        TIMETABLE_LABEL.setForeground(Color.decode("#22469b"));
         layout.putConstraint(SpringLayout.WEST, TIMETABLE_LABEL, 5, SpringLayout.WEST, background);
         labelCons = layout.getConstraints(TIMETABLE_LABEL);
         labelCons.setX(Spring.constant(530));
@@ -98,7 +98,7 @@ public class MainPage extends JFrame {
 
         ATTENDANCE_LABEL = new JLabel("Attendance");
         ATTENDANCE_LABEL.setFont(ATTENDANCE_LABEL.getFont().deriveFont(18f));
-        ATTENDANCE_LABEL.setForeground(Color.white);
+        ATTENDANCE_LABEL.setForeground(Color.decode("#22469b"));
         layout.putConstraint(SpringLayout.WEST, ATTENDANCE_LABEL, 5, SpringLayout.WEST, background);
         labelCons = layout.getConstraints(ATTENDANCE_LABEL);
         labelCons.setX(Spring.constant(180));
@@ -116,7 +116,7 @@ public class MainPage extends JFrame {
 
         EXAMDATES_LABEL = new JLabel("Exam Dates");
         EXAMDATES_LABEL.setFont(EXAMDATES_LABEL.getFont().deriveFont(18f));
-        EXAMDATES_LABEL.setForeground(Color.white);
+        EXAMDATES_LABEL.setForeground(Color.decode("#22469b"));
         layout.putConstraint(SpringLayout.WEST, EXAMDATES_LABEL, 5, SpringLayout.WEST, background);
         labelCons = layout.getConstraints(EXAMDATES_LABEL);
         labelCons.setX(Spring.constant(350));
@@ -134,7 +134,7 @@ public class MainPage extends JFrame {
 
         COURSES_LABEL = new JLabel("Courses");
         COURSES_LABEL.setFont(COURSES_LABEL.getFont().deriveFont(18f));
-        COURSES_LABEL.setForeground(Color.white);
+        COURSES_LABEL.setForeground(Color.decode("#22469b"));
         layout.putConstraint(SpringLayout.WEST, COURSES_LABEL, 5, SpringLayout.WEST, background);
         labelCons = layout.getConstraints(COURSES_LABEL);
         labelCons.setX(Spring.constant(540));
