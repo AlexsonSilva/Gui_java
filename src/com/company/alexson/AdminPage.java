@@ -1,34 +1,38 @@
 package com.company.alexson;
 
+import com.company.alexson.calendar.DataModel;
+import com.company.alexson.calendar.MyCalendar;
+
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class AdminPage extends JFrame{
+public class AdminPage extends JFrame {
 
-    private final JLabel TUTOR_LABEL;
+    private final JLabel LECTURER_LABEL;
     private final JLabel COURSES_LABEL;
-    private final JLabel TIMETABLE_LABEL;
+    private final JLabel COLLEGE_BRANCH_LABEL;
     private final JLabel STUDENT_LABEL;
-    private final JLabel EXAMDATES_LABEL;
-    private final JLabel FEES_LABEL;
-    private final JLabel ENROLMENT_LABEL;
+    private final JLabel MODULE_LABEL;
+//    private final JLabel FEES_LABEL;
+//    private final JLabel ENROLMENT_LABEL;
 
-    private final JButton TUTOR_BUTTON;
+    private final JButton LECTURER_BUTTON;
     private final JButton COURSES_BUTTON;
-    private final JButton TIMETABLE_BUTTON;
+    private final JButton COLLEGE_BRANCH_BUTTON;
     private final JButton STUDENT_BUTTON;
-    private final JButton EXAMDATES_BUTTON;
-    private final JButton FEES_BUTTON;
-    private final JButton ENROLMENT_BUTTON;
+    private final JButton MODULE_BUTTON;
+//    private final JButton FEES_BUTTON;
+//    private final JButton ENROLMENT_BUTTON;
 
     private final JComboBox<String> BRANCH_COMBOBOX;
 
     private final String[] branch_Combobox = {"Branch I", "Branch II",
             "Branch III"};
 
-    public AdminPage(){
+    public AdminPage() {
         super("Admim Page");
 
         JLabel background = new JLabel(new ImageIcon((getClass().getResource("images/admin_bk.jpeg"))));
@@ -37,17 +41,17 @@ public class AdminPage extends JFrame{
         SpringLayout layout = new SpringLayout();
         background.setLayout(layout);
 
-        TUTOR_LABEL = new JLabel("Create/Edit/Delete Tutor");
-        TUTOR_LABEL.setFont(TUTOR_LABEL.getFont().deriveFont(16f));
-        TUTOR_LABEL.setForeground(Color.white);
-        layout.putConstraint(SpringLayout.WEST, TUTOR_LABEL, 5, SpringLayout.WEST, background);
-        SpringLayout.Constraints labelCons = layout.getConstraints(TUTOR_LABEL);
+        LECTURER_LABEL = new JLabel("Create/Edit/Delete Lecturer");
+        LECTURER_LABEL.setFont(LECTURER_LABEL.getFont().deriveFont(16f));
+        LECTURER_LABEL.setForeground(Color.white);
+        layout.putConstraint(SpringLayout.WEST, LECTURER_LABEL, 5, SpringLayout.WEST, background);
+        SpringLayout.Constraints labelCons = layout.getConstraints(LECTURER_LABEL);
         labelCons.setX(Spring.constant(25));
         labelCons.setY(Spring.constant(100));
-        background.add(TUTOR_LABEL);
+        background.add(LECTURER_LABEL);
 
         STUDENT_LABEL = new JLabel("Create/Edit/Delete Student");
-        STUDENT_LABEL.setFont(TUTOR_LABEL.getFont().deriveFont(16f));
+        STUDENT_LABEL.setFont(STUDENT_LABEL.getFont().deriveFont(16f));
         STUDENT_LABEL.setForeground(Color.white);
         layout.putConstraint(SpringLayout.WEST, STUDENT_LABEL, 5, SpringLayout.WEST, background);
         labelCons = layout.getConstraints(STUDENT_LABEL);
@@ -55,14 +59,14 @@ public class AdminPage extends JFrame{
         labelCons.setY(Spring.constant(140));
         background.add(STUDENT_LABEL);
 
-        TIMETABLE_LABEL = new JLabel("Create/Edit/Delete Timetable");
-        TIMETABLE_LABEL.setFont(TIMETABLE_LABEL.getFont().deriveFont(16f));
-        TIMETABLE_LABEL.setForeground(Color.white);
-        layout.putConstraint(SpringLayout.WEST, TIMETABLE_LABEL, 5, SpringLayout.WEST, background);
-        labelCons = layout.getConstraints(TIMETABLE_LABEL);
+        COLLEGE_BRANCH_LABEL = new JLabel("Create/Edit/Delete College Branch");
+        COLLEGE_BRANCH_LABEL.setFont(COLLEGE_BRANCH_LABEL.getFont().deriveFont(16f));
+        COLLEGE_BRANCH_LABEL.setForeground(Color.white);
+        layout.putConstraint(SpringLayout.WEST, COLLEGE_BRANCH_LABEL, 5, SpringLayout.WEST, background);
+        labelCons = layout.getConstraints(COLLEGE_BRANCH_LABEL);
         labelCons.setX(Spring.constant(25));
         labelCons.setY(Spring.constant(180));
-        background.add(TIMETABLE_LABEL);
+        background.add(COLLEGE_BRANCH_LABEL);
 
         COURSES_LABEL = new JLabel("Create/Edit/Delete Courses");
         COURSES_LABEL.setFont(COURSES_LABEL.getFont().deriveFont(16f));
@@ -73,32 +77,32 @@ public class AdminPage extends JFrame{
         labelCons.setY(Spring.constant(220));
         background.add(COURSES_LABEL);
 
-        EXAMDATES_LABEL = new JLabel("Create/Edit/Delete Exam Dates");
-        EXAMDATES_LABEL.setFont(EXAMDATES_LABEL.getFont().deriveFont(16f));
-        EXAMDATES_LABEL.setForeground(Color.white);
-        layout.putConstraint(SpringLayout.WEST, EXAMDATES_LABEL, 5, SpringLayout.WEST, background);
-        labelCons = layout.getConstraints(EXAMDATES_LABEL);
+        MODULE_LABEL = new JLabel("Create/Edit/Delete Module");
+        MODULE_LABEL.setFont(MODULE_LABEL.getFont().deriveFont(16f));
+        MODULE_LABEL.setForeground(Color.white);
+        layout.putConstraint(SpringLayout.WEST, MODULE_LABEL, 5, SpringLayout.WEST, background);
+        labelCons = layout.getConstraints(MODULE_LABEL);
         labelCons.setX(Spring.constant(25));
         labelCons.setY(Spring.constant(260));
-        background.add(EXAMDATES_LABEL);
+        background.add(MODULE_LABEL);
 
-        FEES_LABEL = new JLabel("Create/Edit Fees");
-        FEES_LABEL.setFont(FEES_LABEL.getFont().deriveFont(16f));
-        FEES_LABEL.setForeground(Color.white);
-        layout.putConstraint(SpringLayout.WEST, FEES_LABEL, 5, SpringLayout.WEST, background);
-        labelCons = layout.getConstraints(FEES_LABEL);
-        labelCons.setX(Spring.constant(25));
-        labelCons.setY(Spring.constant(300));
-        background.add(FEES_LABEL);
-
-        ENROLMENT_LABEL = new JLabel("Enrolment of Students");
-        ENROLMENT_LABEL.setFont(ENROLMENT_LABEL.getFont().deriveFont(16f));
-        ENROLMENT_LABEL.setForeground(Color.white);
-        layout.putConstraint(SpringLayout.WEST, ENROLMENT_LABEL, 5, SpringLayout.WEST, background);
-        labelCons = layout.getConstraints(ENROLMENT_LABEL);
-        labelCons.setX(Spring.constant(25));
-        labelCons.setY(Spring.constant(340));
-        background.add(ENROLMENT_LABEL);
+//        FEES_LABEL = new JLabel("Create/Edit Fees");
+//        FEES_LABEL.setFont(FEES_LABEL.getFont().deriveFont(16f));
+//        FEES_LABEL.setForeground(Color.white);
+//        layout.putConstraint(SpringLayout.WEST, FEES_LABEL, 5, SpringLayout.WEST, background);
+//        labelCons = layout.getConstraints(FEES_LABEL);
+//        labelCons.setX(Spring.constant(25));
+//        labelCons.setY(Spring.constant(300));
+//        background.add(FEES_LABEL);
+//
+//        ENROLMENT_LABEL = new JLabel("Enrolment of Students");
+//        ENROLMENT_LABEL.setFont(ENROLMENT_LABEL.getFont().deriveFont(16f));
+//        ENROLMENT_LABEL.setForeground(Color.white);
+//        layout.putConstraint(SpringLayout.WEST, ENROLMENT_LABEL, 5, SpringLayout.WEST, background);
+//        labelCons = layout.getConstraints(ENROLMENT_LABEL);
+//        labelCons.setX(Spring.constant(25));
+//        labelCons.setY(Spring.constant(340));
+//        background.add(ENROLMENT_LABEL);
 
         BRANCH_COMBOBOX = new JComboBox<String>(branch_Combobox);
         BRANCH_COMBOBOX.setFont(BRANCH_COMBOBOX.getFont().deriveFont(16f));
@@ -141,13 +145,13 @@ public class AdminPage extends JFrame{
 //        CHECKBOX_GROUP.add(BRANCH2_CHECKBOX);
 //        CHECKBOX_GROUP.add(BRANCH3_CHECKBOX);
 
-        TUTOR_BUTTON = new JButton("...");
-        TUTOR_BUTTON.setFont(TUTOR_BUTTON.getFont().deriveFont(18f));
-        layout.putConstraint(SpringLayout.WEST, TUTOR_BUTTON, 5, SpringLayout.WEST, background);
-        labelCons = layout.getConstraints(TUTOR_BUTTON);
+        LECTURER_BUTTON = new JButton("...");
+        LECTURER_BUTTON.setFont(LECTURER_BUTTON.getFont().deriveFont(18f));
+        layout.putConstraint(SpringLayout.WEST, LECTURER_BUTTON, 5, SpringLayout.WEST, background);
+        labelCons = layout.getConstraints(LECTURER_BUTTON);
         labelCons.setX(Spring.constant(320));
         labelCons.setY(Spring.constant(100));
-        background.add(TUTOR_BUTTON);
+        background.add(LECTURER_BUTTON);
 
         STUDENT_BUTTON = new JButton("...");
         STUDENT_BUTTON.setFont(STUDENT_BUTTON.getFont().deriveFont(18f));
@@ -157,13 +161,13 @@ public class AdminPage extends JFrame{
         labelCons.setY(Spring.constant(140));
         background.add(STUDENT_BUTTON);
 
-        TIMETABLE_BUTTON = new JButton("...");
-        TIMETABLE_BUTTON.setFont(TIMETABLE_BUTTON.getFont().deriveFont(18f));
-        layout.putConstraint(SpringLayout.WEST, TIMETABLE_BUTTON, 5, SpringLayout.WEST, background);
-        labelCons = layout.getConstraints(TIMETABLE_BUTTON);
+        COLLEGE_BRANCH_BUTTON = new JButton("...");
+        COLLEGE_BRANCH_BUTTON.setFont(COLLEGE_BRANCH_BUTTON.getFont().deriveFont(18f));
+        layout.putConstraint(SpringLayout.WEST, COLLEGE_BRANCH_BUTTON, 5, SpringLayout.WEST, background);
+        labelCons = layout.getConstraints(COLLEGE_BRANCH_BUTTON);
         labelCons.setX(Spring.constant(320));
         labelCons.setY(Spring.constant(180));
-        background.add(TIMETABLE_BUTTON);
+        background.add(COLLEGE_BRANCH_BUTTON);
 
         COURSES_BUTTON = new JButton("...");
         COURSES_BUTTON.setFont(COURSES_BUTTON.getFont().deriveFont(18f));
@@ -173,42 +177,57 @@ public class AdminPage extends JFrame{
         labelCons.setY(Spring.constant(220));
         background.add(COURSES_BUTTON);
 
-        EXAMDATES_BUTTON = new JButton("...");
-        EXAMDATES_BUTTON.setFont(EXAMDATES_BUTTON.getFont().deriveFont(18f));
-        layout.putConstraint(SpringLayout.WEST, EXAMDATES_BUTTON, 5, SpringLayout.WEST, background);
-        labelCons = layout.getConstraints(EXAMDATES_BUTTON);
+        MODULE_BUTTON = new JButton("...");
+        MODULE_BUTTON.setFont(MODULE_BUTTON.getFont().deriveFont(18f));
+        layout.putConstraint(SpringLayout.WEST, MODULE_BUTTON, 5, SpringLayout.WEST, background);
+        labelCons = layout.getConstraints(MODULE_BUTTON);
         labelCons.setX(Spring.constant(320));
         labelCons.setY(Spring.constant(260));
-        background.add(EXAMDATES_BUTTON);
+        background.add(MODULE_BUTTON);
+//
+//        FEES_BUTTON = new JButton("...");
+//        FEES_BUTTON.setFont(FEES_BUTTON.getFont().deriveFont(18f));
+//        layout.putConstraint(SpringLayout.WEST, FEES_BUTTON, 5, SpringLayout.WEST, background);
+//        labelCons = layout.getConstraints(FEES_BUTTON);
+//        labelCons.setX(Spring.constant(320));
+//        labelCons.setY(Spring.constant(300));
+//        background.add(FEES_BUTTON);
 
-        FEES_BUTTON = new JButton("...");
-        FEES_BUTTON.setFont(FEES_BUTTON.getFont().deriveFont(18f));
-        layout.putConstraint(SpringLayout.WEST, FEES_BUTTON, 5, SpringLayout.WEST, background);
-        labelCons = layout.getConstraints(FEES_BUTTON);
-        labelCons.setX(Spring.constant(320));
-        labelCons.setY(Spring.constant(300));
-        background.add(FEES_BUTTON);
+//        ENROLMENT_BUTTON = new JButton("...");
+//        ENROLMENT_BUTTON.setFont(ENROLMENT_BUTTON.getFont().deriveFont(18f));
+//        layout.putConstraint(SpringLayout.WEST, ENROLMENT_BUTTON, 5, SpringLayout.WEST, background);
+//        labelCons = layout.getConstraints(ENROLMENT_BUTTON);
+//        labelCons.setX(Spring.constant(320));
+//        labelCons.setY(Spring.constant(340));
+//        background.add(ENROLMENT_BUTTON);
 
-        ENROLMENT_BUTTON = new JButton("...");
-        ENROLMENT_BUTTON.setFont(ENROLMENT_BUTTON.getFont().deriveFont(18f));
-        layout.putConstraint(SpringLayout.WEST, ENROLMENT_BUTTON, 5, SpringLayout.WEST, background);
-        labelCons = layout.getConstraints(ENROLMENT_BUTTON);
-        labelCons.setX(Spring.constant(320));
-        labelCons.setY(Spring.constant(340));
-        background.add(ENROLMENT_BUTTON);
+        LECTURER_BUTTON.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    LecturerRegistration lecturerRegistration = new LecturerRegistration(); //creates a frame
+                    lecturerRegistration.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //exit out of application
+                    lecturerRegistration.setResizable(false); //prevent frame from being resized
+                    lecturerRegistration.setSize(800, 533); //sets the x-dimension, and y-dimension of frame
+                    lecturerRegistration.setVisible(true); //make frame visible
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
+            }
+        });
 
 
         STUDENT_BUTTON.addActionListener(new ActionListener() {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-                try{
-//                    Registration registration = new Registration(); //creates a frame
-//                    registration.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //exit out of application
-//                    registration.setResizable(false); //prevent frame from being resized
-//                    registration.setSize(800, 533); //sets the x-dimension, and y-dimension of frame
-//                    registration.setVisible(true); //make frame visible
-
+                try {
+                    StudentRegistration studentRegistration = new StudentRegistration(); //creates a frame
+                    studentRegistration.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //exit out of application
+                    studentRegistration.setResizable(false); //prevent frame from being resized
+                    studentRegistration.setSize(800, 533); //sets the x-dimension, and y-dimension of frame
+                    studentRegistration.setVisible(true); //make frame visible
 
 
 //                    Person alexson = new Person("Alexson", "Silva", "alexsonsilva@gmail.com", "21643", "1234");
@@ -218,6 +237,23 @@ public class AdminPage extends JFrame{
 //                    registration.addPerson(alexson);
 //                    registration.addPerson(val);
 //                    registration.addPerson(marcus);
+
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
+            }
+        });
+
+        COURSES_BUTTON.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try{
+
+                    CourseRegistration courseRegistration = new CourseRegistration();
+                    courseRegistration.setResizable(false);
+                    courseRegistration.setSize(new Dimension(800, 533));
+                    courseRegistration.setVisible(true);
+
 
                 }
                 catch (Exception ex){

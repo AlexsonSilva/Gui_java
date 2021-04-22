@@ -47,7 +47,7 @@ public class AssignmentPage_Lecturer extends JFrame {
 
         super("Lecturer Assigment");
 
-        JLabel background = new JLabel(new ImageIcon(getClass().getResource("images/main_bk.jpg")));
+        JLabel background = new JLabel(new ImageIcon(getClass().getResource("images/main_bk.jpeg")));
         add(background);
 
         SpringLayout layout = new SpringLayout();

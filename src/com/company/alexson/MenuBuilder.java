@@ -4,7 +4,7 @@ import javax.swing.*;
 
 public class MenuBuilder {
     public static void Run(){
-//        StartMenu();
+        StartMenu();
 
     }
     private static void StartMenu(){

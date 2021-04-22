@@ -3,6 +3,7 @@ package com.company.alexson;
 import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -43,6 +44,7 @@ public class StudentInformation extends JFrame{
 
     public StudentInformation(){
         super("Student Information");
+
         this.setContentPane(this.panelMain);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setSize(800,533);
@@ -89,11 +91,11 @@ public class StudentInformation extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 try{
-                    CoursesRegistration coursesRegistration = new CoursesRegistration(); //creates a frame
-                    coursesRegistration.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //exit out of application
-                    coursesRegistration.setResizable(false); //prevent frame from being resized
-                    coursesRegistration.setSize(800, 533); //sets the x-dimension, and y-dimension of frame
-                    coursesRegistration.setVisible(true); //make frame visible
+//                    CourseRegistration courseRegistration = new CourseRegistration(); //creates a frame
+//                    courseRegistration.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //exit out of application
+//                    courseRegistration.setResizable(false); //prevent frame from being resized
+//                    courseRegistration.setSize(800, 533); //sets the x-dimension, and y-dimension of frame
+//                    courseRegistration.setVisible(true); //make frame visible
 
                 }
                 catch (Exception ex){

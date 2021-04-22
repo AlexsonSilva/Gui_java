@@ -1,6 +1,7 @@
 package com.company.alexson;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class Main {
 
@@ -24,11 +25,11 @@ public class Main {
 
 
 
-//        AdminPage adminPage = new AdminPage(); //creates a frame
-//        adminPage.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //exit out of application
-//        adminPage.setResizable(false); //prevent frame from being resized
-//        adminPage.setSize(800, 533); //sets the x-dimension, and y-dimension of frame
-//        adminPage.setVisible(true); //make frame visible
+        AdminPage adminPage = new AdminPage(); //creates a frame
+        adminPage.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //exit out of application
+        adminPage.setResizable(false); //prevent frame from being resized
+        adminPage.setSize(800, 533); //sets the x-dimension, and y-dimension of frame
+        adminPage.setVisible(true); //make frame visible
 
 
 //        AdminStudent adminStudent = new AdminStudent(); //creates a frame
@@ -43,27 +44,39 @@ public class Main {
 //        test.setVisible(true);
 
 
-        StudentInformation studentInformation = new StudentInformation();
-        studentInformation.setVisible(true);
+//        StudentInformation studentInformation = new StudentInformation();
+//        studentInformation.setVisible(true);
+//
+//        Person alexson = new Person("Alexson", "Silva", "alexsonsilva@gmail.com", "21643", "1234");
+//        Person val = new Person("Valeria", "Paz", "val@gmail.com", "1234", "1234");
+//        Person marcus = new Person("Marcus", "Moura", "marcus@gmail.com", "5678", "1234");
+//
+//        studentInformation.addPerson(alexson);
+//        studentInformation.addPerson(val);
+//        studentInformation.addPerson(marcus);
 
-        Person alexson = new Person("Alexson", "Silva", "alexsonsilva@gmail.com", "21643", "1234");
-        Person val = new Person("Valeria", "Paz", "val@gmail.com", "1234", "1234");
-        Person marcus = new Person("Marcus", "Moura", "marcus@gmail.com", "5678", "1234");
+//        CoursesRegistration coursesRegistration = new CoursesRegistration();
+//        Courses Java = new Courses("Branch I", "Java", "John");
+//        Courses Maths = new Courses("Branch II", "Maths", "Anette");
+//        Courses Data = new Courses("Branch III", "Data Storage", "Wenhao");
+//
+//        coursesRegistration.addCourse(Java);
+//        coursesRegistration.addCourse(Maths);
+//        coursesRegistration.addCourse(Data);
 
-        studentInformation.addPerson(alexson);
-        studentInformation.addPerson(val);
-        studentInformation.addPerson(marcus);
 
-        CoursesRegistration coursesRegistration = new CoursesRegistration();
-//        coursesRegistration.setVisible(true);
+//        LecturerRegistration lecturerRegistration = new LecturerRegistration();
+//        lecturerRegistration.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //exit out of application
+//        lecturerRegistration.setResizable(false); //prevent frame from being resized
+//        lecturerRegistration.setSize(800, 533); //sets the x-dimension, and y-dimension of frame
+//        lecturerRegistration.setVisible(true); //make frame visible
 
-        Courses Java = new Courses("Branch I", "Java", "John");
-        Courses Maths = new Courses("Branch II", "Maths", "Anette");
-        Courses Data = new Courses("Branch III", "Data Storage", "Wenhao");
+//        StudentRegistration studentRegistration = new StudentRegistration();
+//        studentRegistration.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //exit out of application
+//        studentRegistration.setResizable(false); //prevent frame from being resized
+//        studentRegistration.setSize(800, 533); //sets the x-dimension, and y-dimension of frame
+//        studentRegistration.setVisible(true); //make frame visible
 
-        coursesRegistration.addCourse(Java);
-        coursesRegistration.addCourse(Maths);
-        coursesRegistration.addCourse(Data);
 
     }
 }
