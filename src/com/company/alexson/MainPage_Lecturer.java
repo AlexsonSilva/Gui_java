@@ -5,7 +5,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class MainPage extends JFrame {
+public class MainPage_Lecturer extends JFrame {
 
     private final JButton ASSIGNMENTS_BUTTON;
     private final JButton GRADES_BUTTON;
@@ -21,7 +21,7 @@ public class MainPage extends JFrame {
     private final JLabel EXAMDATES_LABEL;
     private final JLabel COURSES_LABEL;
 
-    public MainPage(){
+    public MainPage_Lecturer(){
         super("Main Page");
 
         JLabel background=new JLabel(new ImageIcon(getClass().getResource("images/main_bk.jpeg")));
@@ -174,6 +174,23 @@ public class MainPage extends JFrame {
                     examsPageLecturer.setResizable(false); //prevent frame from being resized
                     examsPageLecturer.setSize(800, 533); //sets the x-dimension, and y-dimension of frame
                     examsPageLecturer.setVisible(true); //make frame visible
+
+                }
+                catch (Exception ex){
+                    ex.printStackTrace();
+                }
+            }
+        });
+
+        GRADES_BUTTON.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try{
+                    GradesPage_Lecturer gradesPage_lecturer = new GradesPage_Lecturer(); //creates a frame
+                    gradesPage_lecturer.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //exit out of application
+                    gradesPage_lecturer.setResizable(false); //prevent frame from being resized
+                    gradesPage_lecturer.setSize(800, 533); //sets the x-dimension, and y-dimension of frame
+                    gradesPage_lecturer.setVisible(true); //make frame visible
 
                 }
                 catch (Exception ex){

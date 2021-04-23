@@ -95,6 +95,12 @@ public class Main {
 //        examsPage_student.setSize(800, 533); //sets the x-dimension, and y-dimension of frame
 //        examsPage_student.setVisible(true); //make frame visible
 
+//        GradesPage_Student gradesPage_student = new GradesPage_Student();
+//        gradesPage_student.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //exit out of application
+//        gradesPage_student.setResizable(false); //prevent frame from being resized
+//        gradesPage_student.setSize(800, 533); //sets the x-dimension, and y-dimension of frame
+//        gradesPage_student.setVisible(true); //make frame visible
+
 
     }
 }

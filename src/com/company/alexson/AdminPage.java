@@ -262,31 +262,6 @@ public class AdminPage extends JFrame {
             }
         });
 
-        STUDENT_BUTTON.addActionListener(new ActionListener() {
-
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                try {
-                    StudentRegistration studentRegistration = new StudentRegistration(); //creates a frame
-                    studentRegistration.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //exit out of application
-                    studentRegistration.setResizable(false); //prevent frame from being resized
-                    studentRegistration.setSize(800, 533); //sets the x-dimension, and y-dimension of frame
-                    studentRegistration.setVisible(true); //make frame visible
-
-
-//                    Person alexson = new Person("Alexson", "Silva", "alexsonsilva@gmail.com", "21643", "1234");
-//                    Person val = new Person("Valeria", "Paz", "val@gmail.com", "1234", "1234");
-//                    Person marcus = new Person("Marcus", "Moura", "marcus@gmail.com", "5678", "1234");
-//
-//                    registration.addPerson(alexson);
-//                    registration.addPerson(val);
-//                    registration.addPerson(marcus);
-
-                } catch (Exception ex) {
-                    ex.printStackTrace();
-                }
-            }
-        });
 
         COLLEGE_BRANCH_BUTTON.addActionListener(new ActionListener() {
             @Override

@@ -85,11 +85,17 @@ public class Login extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try{
-                    MainPage mainPage = new MainPage(); //creates a frame
-                    mainPage.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //exit out of application
-                    mainPage.setResizable(false); //prevent frame from being resized
-                    mainPage.setSize(800, 533); //sets the x-dimension, and y-dimension of frame
-                    mainPage.setVisible(true); //make frame visible
+                    MainPage_Lecturer mainPageLecturer = new MainPage_Lecturer(); //creates a frame
+                    mainPageLecturer.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //exit out of application
+                    mainPageLecturer.setResizable(false); //prevent frame from being resized
+                    mainPageLecturer.setSize(800, 533); //sets the x-dimension, and y-dimension of frame
+                    mainPageLecturer.setVisible(true); //make frame visible
+
+                    MainPage_Student mainPage_student = new MainPage_Student(); //creates a frame
+                    mainPage_student.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //exit out of application
+                    mainPage_student.setResizable(false); //prevent frame from being resized
+                    mainPage_student.setSize(800, 533); //sets the x-dimension, and y-dimension of frame
+                    mainPage_student.setVisible(true); //make frame visible
 
                 }
                 catch (Exception ex){
