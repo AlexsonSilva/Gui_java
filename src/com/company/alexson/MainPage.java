@@ -1,9 +1,6 @@
 package com.company.alexson;
 
-import com.company.alexson.calendar.*;
-
 import javax.swing.*;
-import javax.xml.crypto.Data;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -145,21 +142,38 @@ public class MainPage extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try{
-//                    AssignmentPage_Lecturer assignmentPage_lecturer = new AssignmentPage_Lecturer(); //creates a frame
-//                    assignmentPage_lecturer.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //exit out of application
-//                    assignmentPage_lecturer.setResizable(false); //prevent frame from being resized
-//                    assignmentPage_lecturer.setSize(800, 533); //sets the x-dimension, and y-dimension of frame
-//                    assignmentPage_lecturer.setVisible(true); //make frame visible
+                    AssignmentPage_Lecturer assignmentPage_lecturer = new AssignmentPage_Lecturer(); //creates a frame
+                    assignmentPage_lecturer.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //exit out of application
+                    assignmentPage_lecturer.setResizable(false); //prevent frame from being resized
+                    assignmentPage_lecturer.setSize(800, 533); //sets the x-dimension, and y-dimension of frame
+                    assignmentPage_lecturer.setVisible(true); //make frame visible
 
-                    MyCalendar myCalendar = new MyCalendar(new DataModel());
-                    myCalendar.setResizable(false);
-                    myCalendar.setSize(new Dimension(500, 750));
-                    myCalendar.setVisible(true);
+//                    MyCalendar myCalendar = new MyCalendar(new DataModel());
+//                    myCalendar.setResizable(false);
+//                    myCalendar.setSize(new Dimension(500, 750));
+//                    myCalendar.setVisible(true);
 
 //                    StudentCalendar studentCalendar = new StudentCalendar(new DataModel());
 //                    studentCalendar.setResizable(false);
 //                    studentCalendar.setSize(new Dimension(500, 750));
 //                    studentCalendar.setVisible(true);
+
+                }
+                catch (Exception ex){
+                    ex.printStackTrace();
+                }
+            }
+        });
+
+        EXAM_DATE_BUTTON.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try{
+                    ExamsPage_Lecturer examsPageLecturer = new ExamsPage_Lecturer(); //creates a frame
+                    examsPageLecturer.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //exit out of application
+                    examsPageLecturer.setResizable(false); //prevent frame from being resized
+                    examsPageLecturer.setSize(800, 533); //sets the x-dimension, and y-dimension of frame
+                    examsPageLecturer.setVisible(true); //make frame visible
 
                 }
                 catch (Exception ex){

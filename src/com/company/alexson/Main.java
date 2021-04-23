@@ -25,11 +25,11 @@ public class Main {
 
 
 
-        AdminPage adminPage = new AdminPage(); //creates a frame
-        adminPage.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //exit out of application
-        adminPage.setResizable(false); //prevent frame from being resized
-        adminPage.setSize(800, 533); //sets the x-dimension, and y-dimension of frame
-        adminPage.setVisible(true); //make frame visible
+//        AdminPage adminPage = new AdminPage(); //creates a frame
+//        adminPage.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //exit out of application
+//        adminPage.setResizable(false); //prevent frame from being resized
+//        adminPage.setSize(800, 533); //sets the x-dimension, and y-dimension of frame
+//        adminPage.setVisible(true); //make frame visible
 
 
 //        AdminStudent adminStudent = new AdminStudent(); //creates a frame
@@ -76,6 +76,24 @@ public class Main {
 //        studentRegistration.setResizable(false); //prevent frame from being resized
 //        studentRegistration.setSize(800, 533); //sets the x-dimension, and y-dimension of frame
 //        studentRegistration.setVisible(true); //make frame visible
+
+//        AssignmentPage_Lecturer assignmentPage_lecturer = new AssignmentPage_Lecturer();
+//        assignmentPage_lecturer.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //exit out of application
+//        assignmentPage_lecturer.setResizable(false); //prevent frame from being resized
+//        assignmentPage_lecturer.setSize(800, 533); //sets the x-dimension, and y-dimension of frame
+//        assignmentPage_lecturer.setVisible(true); //make frame visible
+
+//        AssignmentPage_Student assignmentPage_student = new AssignmentPage_Student();
+//        assignmentPage_student.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //exit out of application
+//        assignmentPage_student.setResizable(false); //prevent frame from being resized
+//        assignmentPage_student.setSize(800, 533); //sets the x-dimension, and y-dimension of frame
+//        assignmentPage_student.setVisible(true); //make frame visible
+
+//        ExamsPage_Student examsPage_student = new ExamsPage_Student();
+//        examsPage_student.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //exit out of application
+//        examsPage_student.setResizable(false); //prevent frame from being resized
+//        examsPage_student.setSize(800, 533); //sets the x-dimension, and y-dimension of frame
+//        examsPage_student.setVisible(true); //make frame visible
 
 
     }
