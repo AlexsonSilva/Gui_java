@@ -22,7 +22,7 @@ public class MainPage_Lecturer extends JFrame {
     private final JLabel COURSES_LABEL;
 
     public MainPage_Lecturer(){
-        super("Main Page");
+        super("Main Page Lecturer");
 
         JLabel background=new JLabel(new ImageIcon(getClass().getResource("images/main_bk.jpeg")));
         add(background);

@@ -21,7 +21,7 @@ public class MainPage_Student extends JFrame {
     private final JLabel COURSES_LABEL;
 
     public MainPage_Student(){
-        super("Main Page");
+        super("Main Page Student");
 
         JLabel background=new JLabel(new ImageIcon(getClass().getResource("images/main_bk.jpeg")));
         add(background);
